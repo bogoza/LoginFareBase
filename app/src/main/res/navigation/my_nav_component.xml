@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav_component"
+    app:startDestination="@id/loggedOutFragment">
+
+    <fragment
+        android:id="@+id/loggedOutFragment"
+        android:name="com.example.loginfarebase.LoggedOutFragment"
+        android:label="fragment_loged_out"
+        tools:layout="@layout/fragment_logged_out" >
+        <action
+            android:id="@+id/registrationDst"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/loginDst"
+            app:destination="@id/logInFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.loginfarebase.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.loginfarebase.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" />
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.loginfarebase.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" />
+    <fragment
+        android:id="@+id/nicknameFragment"
+        android:name="com.example.loginfarebase.NicknameFragment"
+        android:label="fragment_nickname"
+        tools:layout="@layout/fragment_nickname" />
+</navigation>
